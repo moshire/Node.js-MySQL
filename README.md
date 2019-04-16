@@ -1,71 +1,71 @@
 # Node.js-MySQL
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ## Contributors
-@rcubillo
+@moshire
 
 ## Technology
-* Constructors
+* MySQL
 * JavaScript
 * NPM
+* Node
     
 ## About
 
- Word Guess command-line game using constructor functions
+ Amazon-like storefront with the MySQL 
 
 ## Instructions
 
-This game meet the following criteria:
+1.Create a MySQL Database called bamazon.
+2.Then create a Table inside of that database called products.
+3.The products table should have each of the following columns:
 
-1. The game receive user input using the `inquirer` npm packages.
 
-2. This game has three files:
 
-* **Letter.js**: Contains a constructor, Letter. This constructor display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. The constructor should define:
+*item_id (unique id for each product)
+*product_name (Name of product)
+*department_name
+*price (cost to customer)
+*stock_quantity (how much of the product is available in stores)
 
-  * A string value to store the underlying character for the letter
 
-  * A boolean value that stores whether that letter has been guessed yet
 
-  * A function that returns the underlying character if the letter has been guessed, or a placeholder (like an underscore) if the letter has not been guessed
+1.Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
+2.Then create a Node application called bamazonCustomer.js. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+3.The app should then prompt users with two messages.
 
-  * A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
 
-* **Word.js**: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess. That means the constructor should define:
 
-  * An array of `new` Letter objects representing the letters of the underlying word
+*The first should ask them the ID of the product they would like to buy.
+*The second message should ask how many units of the product they would like to buy.
 
-  * A function that returns a string representing the word. This should call the function on each letter object (the first function defined in `Letter.js`) that displays the character or an underscore and concatenate those together.
 
-  * A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in `Letter.js`)
 
-* **index.js**: The file containing the logic for the course of the game, which depends on `Word.js` and:
+1.Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
 
-  * Randomly selects a word and uses the `Word` constructor to store it
 
-  * Prompts the user for each guess and keeps track of the user's remaining guesses
 
-3. `Letter.js` doesn't `require` any other files.
+*If not, the app should log a phrase like ***Insufficient quantity!***, and then prevent the order from going through.
 
-4. `Word.js` *should only* require `Letter.js`
+
+
+1.However, if your store does have enough of the product, you should fulfill the customer's order.
+
+
+   *This means updating the SQL database to reflect the remaining quantity.
+    
+   *Once the update goes through, show the customer the total cost of their purchase.
 
 ## Let's take a look
 
-The game starts...
-![Log Output](Screenshots/1.png)
+what item you wanna buy
+![Log Output](Screenshots/image1.png)
 
-You guess a letter...
-![Log Output](Screenshots/2.png)
+Your order was placed successfully!
+![Log Output](Screenshots/image2.png)
 
-When you type an incorrect letter...
-![Log Output](Screenshots/3.png)
-
-You guess the world...
-![Log Output](Screenshots/4.png)
-
-When you lose...
-![Log Output](Screenshots/5.png)
+insufficient stock! your is not complete
+![Log Output](Screenshots/image3.png)
 
 
 ## Contributing Guidelines
