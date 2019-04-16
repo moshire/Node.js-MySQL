@@ -64,8 +64,9 @@ what item you wanna buy
 Your order was placed successfully!
 ![Log Output](Screenshots/image2.png)
 
-insufficient stock! your is not complete
-![Log Output](Screenshots/image3.png)
+
+
+![picture alt](Node.js-MySQL/screenshots/image3.png "insufficient stock! your is not complete")
 
 
 ## Contributing Guidelines
