@@ -59,14 +59,14 @@
 ## Let's take a look
 
 what item you wanna buy
-![Log Output](Screenshots/image1.png)
+![Log Output](screenshots/image1.png)
 
 Your order was placed successfully!
-![Log Output](Screenshots/image2.png)
+![Log Output](screenshots/image2.png)
 
+your order is not complete! insufficient stock
+![Log Output](screenshots/image3.png)
 
-
-![picture alt](Node.js-MySQL/screenshots/image3.png "insufficient stock! your is not complete")
 
 
 ## Contributing Guidelines
